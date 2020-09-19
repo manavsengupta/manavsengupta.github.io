@@ -9,7 +9,7 @@
 ### Created QuantumRealm Blogs Website as a Django and Python project for providing Fun and fundamental Science Concepts to people, which would give their scientific enthusiasm and curiosity a spark. The Website's Content is created by me and my classmates(as well as best friends):
 <ul>
   <li>
-  Souhardya Chakroborty
+  Souhardya Chakraborty
   </li>
   <li>
   Soumyadeep Mukherjee
