@@ -6,6 +6,17 @@
 <a href="https://www.github.com/textminingproject">Text Mining Project</a>
 
 ### August 2020
-### Created QuantumRealm Blogs Website as a Django and Python project for providing Fun and fundamental Science Concepts to people, which would give their scientific enthusiasm and curiosity a spark
+### Created QuantumRealm Blogs Website as a Django and Python project for providing Fun and fundamental Science Concepts to people, which would give their scientific enthusiasm and curiosity a spark. The Website;s Content is created by me and my classmates(as well as best friends):
+<ul>
+  <li>
+  Souhardya Chakroborty
+  </li>
+  <li>
+  Soumyadeep Mukherjee
+  </li>
+  <li>
+  Shivam Mondal
+  </li>
+</ul>
 <a href="https://www.quantumrealm.in">QuantumRealm Blogs</a>
 
