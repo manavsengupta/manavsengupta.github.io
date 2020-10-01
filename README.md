@@ -14,9 +14,7 @@
   <li>
   Soumyadeep Mukherjee
   </li>
-  <li>
-  Shivam Mondal
-  </li>
+
 </ul>
 <a href="https://www.quantumrealm.in">QuantumRealm Blogs</a>
 <small>Registered(a little late) in Internet Archive's Wayback Machine <a href="https://web.archive.org/web/*/https://www.quantumrealm.in/"> Here </a></small>
