@@ -19,3 +19,7 @@
 <a href="https://www.quantumrealm.in">QuantumRealm Blogs</a>
 <small>Registered(a little late) in Internet Archive's Wayback Machine <a href="https://web.archive.org/web/*/https://www.quantumrealm.in/"> Here </a></small>
 
+### October 2020
+### Create cryptimg for Encrypting and Decrypting Images in a folder and its subfolders recursively using Python3 by AES Encryption using pycryptodome for safe backup of images.
+<a href="https://www.github.com/manavsengupta/cryptimg">CryptImg project</a>
+
