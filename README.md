@@ -1,5 +1,5 @@
 
-<h1>We are sorry, QuantumRealm Blogs project has reached its end of life, hope it was useful throughout its life but need not worry may be something bigger is coming up and it will not reach its end of life so soon, and it will have quantumrealmblogs integrated in it, so take this as a transformation Thanks!.</h1>
+<h1>We are sorry, QuantumRealm Blogs project has reached its end of life, hope it was useful throughout its life but need not worry may be something bigger is coming up and it will not reach its end of life so soon, and it may have quantumrealmblogs integrated in it, so take this as a transformation Thanks!.</h1>
 
 
 
