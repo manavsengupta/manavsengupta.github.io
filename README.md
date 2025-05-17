@@ -1,29 +1,561 @@
 
-<h1>We are sorry, QuantumRealm Blogs project has reached its end of life, hope it was useful throughout its life but need not worry may be something bigger is coming up and it will not reach its end of life so soon, and it may have quantumrealmblogs integrated in it, so take this as a transformation Thanks!.</h1>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manav's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000021;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      padding: 0 40px;
+      background-color: #12123e;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      color: #aaa;
+    }
+
+    .firstSection {
+      display: flex;
+      justify-content: space-around;
+      margin: 10px 0;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .leftSection {
+      font-size: 3rem;
+      margin: 10px;
+    }
+
+    .rightSection {
+      width: 400px;
+      margin: 40px;
+    }
+
+    .rightSection img {
+      width: 100%;
+    }
+
+    .purple {
+      color: #a96be4;
+    }
+
+    .title-section {
+      text-align: center;
+      margin: 60px 0 20px;
+    }
+
+    .toggle-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 30px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #888;
+      transition: 0.4s;
+      border-radius: 30px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 22px;
+      width: 22px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #6c63ff;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(30px);
+    }
+
+    .experience-box {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 80px;
+    }
+
+    .card {
+      position: relative;
+      width: 280px;
+      height: 200px;
+      background: #1e1e3f;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card-content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      transition: transform 0.4s ease-in-out;
+      z-index: 2;
+    }
+
+    .card:hover .card-content {
+      transform: translateY(-100%);
+    }
+
+    .card h3 {
+      color: #a96be4;
+      margin-bottom: 10px;
+    }
+
+    .card-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.9;
+      z-index: 1;
+      transform: translateY(100%);
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .card:hover .card-image {
+      transform: translateY(0%);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .certification-section {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #12123e;
+    }
+
+    .certification-section h2 {
+      margin-bottom: 20px;
+      color: #a96be4;
+    }
+
+    .certification-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .certification-section li {
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+
+    footer {
+      background-color: #1a1a3c;
+      padding: 60px 20px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-links {
+      margin-top: 10px;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1.1rem;
+    }
+
+    .footer-links a:hover {
+      color: #a96be4;
+      text-decoration: underline;
+    }
+
+    .starfield-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .starfield-container .stars,
+    .starfield-container .shooting-star {
+      position: absolute;
+      z-index: 1;
+    }
+
+    .starfield-container .stars {
+      width: 1px;
+      height: 0px;
+      background: white;
+      box-shadow: 2vw 5vh 2px white, 10vw 8vh 2px white, 15vw 15vh 1px white;
+      animation: twinkle 8s infinite linear;
+    }
+
+    .starfield-container .stars::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 5px;
+      background: white;
+      box-shadow: 8vw 12vh 2px white, 16vw 18vh 1px white;
+      animation: twinkle 6s infinite linear reverse;
+    }
+
+    .starfield-container .shooting-star {
+      width: 40px;
+      height: 1.5px;
+      background: linear-gradient(90deg, white, transparent);
+      animation: shoot 3s infinite ease-in;
+    }
+
+    .starfield-container .shooting-star:nth-child(2) { top: 20%; left: -100px; animation-delay: 0s; }
+    .starfield-container .shooting-star:nth-child(3) { top: 35%; left: -100px; animation-delay: 1s; }
+    .starfield-container .shooting-star:nth-child(4) { top: 50%; left: -100px; animation-delay: 2s; }
+    .starfield-container .shooting-star:nth-child(5) { top: 65%; left: -100px; animation-delay: 4s; }
+    .starfield-container .shooting-star:nth-child(6) { top: 80%; left: -100px; animation-delay: 6s; }
+
+    .leftSection, .rightSection {
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 0.4; }
+    }
+
+    @keyframes shoot {
+      0% {
+        transform: translateX(0) translateY(0) rotate(25deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(120vw) translateY(50vh) rotate(25deg);
+        opacity: 0;
+      }
+    }
+  </style>
+  
 
 
 
-# My Projects:
 
-### June 2020
-### Created Text-Mining Python program as my first intermediate Python Project, dedicated to my aunt Dr. Debashree Sengupta who told me to try and make a program that could recursively scan through .txt and .pdf in a directory and its sub-directories and give a summary of the topics in them.
-<a href="https://www.github.com/manavsengupta/textminingproject">Text-Mining Project</a>
 
-### August 2020
-### Created QuantumRealm Blogs Website as a Django and Python project for providing Fun and fundamental Science Concepts to people, which would give their scientific enthusiasm and curiosity a spark. The Website's Content is created by me and my classmates(as well as best friends):
-<ul>
-  <li>
-  Souhardya Chakraborty
-  </li>
-  <li>
-  Soumyadeep Mukherjee
-  </li>
 
-</ul>
-<a href="https://www.quantumrealm.in">QuantumRealm Blogs</a>
-<small>Registered(a little late) in Internet Archive's Wayback Machine <a href="https://web.archive.org/web/*/https://www.quantumrealm.in/"> Here </a></small>
+<style>
+  .certification-section {
+    padding: 60px 20px;
+    background: linear-gradient(to right, #1a1a3c, #101026);
+    text-align: center;
+    color: white;
+  }
+  .certification-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #a96be4;
+  }
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .cert-card {
+    background: #23234e;
+    border-left: 4px solid #a96be4;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(169, 107, 228, 0.3);
+  }
+  .cert-card h3 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+  .cert-card p {
+    font-size: 0.95rem;
+    color: #cccccc;
+  }
+</style>
 
-### October 2020
-### Created cryptimg for Encrypting and Decrypting Images in a folder and its subfolders recursively using Python3 by AES Encryption using pycryptodome for safe backup of images.
-<a href="https://www.github.com/manavsengupta/cryptimg">CryptImg project</a>
 
+
+
+
+</head>
+<body>
+  <!-- Existing Content Above -->
+
+  <nav>
+    <div><strong>Manav's Portfolio</strong></div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#project">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+<section class="firstSection starfield-container">
+  <div class="stars"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+
+  <div class="leftSection">
+    Hi, my name is <span class="purple">Manav</span>
+    <div>and I am a passionate</div>
+    <div><span id="element" class="purple"></span></div>
+  </div>
+
+  <div class="rightSection">
+    <img src="manav.png" alt="Manav Image" />
+  </div>
+</section>
+
+
+  <div class="title-section" id="project">
+    <h1 id="section-title">Core Engineering Projects</h1>
+    <p class="text-gray">What I have done so far</p>
+  </div>
+
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="modeToggle" />
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="experience-box" id="core">
+     <div class="card">
+      <div class="card-content">
+        <h3>Laser Communication</h3>
+        <p>Digital laser transmission using Hamming ECC with LDR-based reception system.</p>
+      </div>
+      <div class="card-image" style="background-image: url('hcc.jpg');background-size: contain;background-repeat: no-repeat;">
+
+
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <h3>Op-Amp Overcurrent Protection</h3>
+        <p>Relay based current limiter using Op-Amps for lab power systems.</p>
+      </div>
+      <div class="card-image" style="background-image: url('ocp.jpg');background-size: contain;background-repeat: no-repeat;"></div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <h3>Digital Voting Machine</h3>
+        <p>Built using D Flip-Flops and adders, counts 4-bit votes for 3 candidates.</p>
+      </div>
+      <div class="card-image" style="background-image: url('vm.jpg');background-size: contain;background-repeat: no-repeat;"></div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <h3>ECG with ML</h3>
+        <p>Pico-based ECG monitor with arrhythmia detection using machine learning.</p>
+      </div>
+      <div class="card-image" style="background-image: url('ecg.png');background-size: contain;background-repeat: no-repeat;"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+         
+ 
+        <h3>Soil Moisture Sensor</h3>
+        <p>Impedance-based moisture sensing system for plant irrigation</p>
+      </div>
+      <div class="card-image" style="background-image: url('sm.jpg');background-size: contain;background-repeat: no-repeat;"></div>
+    </div>
+   
+  </div>
+
+  <div class="experience-box hidden" id="it">
+    <div class="card">
+      <div class="card-content">
+        <h3>DCC ShutterSeek</h3>
+        <p>Full-stack Django app that fetches images from Royalty Free Image APIs like Unsplash and Pixabay with pagination and metadata.</p>
+      </div>
+      <div class="card-image" style="background-image: url('DCC.png');background-size: contain;background-repeat: no-repeat;"></div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <h3>CampusAssist</h3>
+        <p>Django app for campus task exchange, including delivery, assignments, and messaging.</p>
+      </div>
+      <div class="card-image" style="background-image: url('NitaGenie.jpg');background-size: contain;background-repeat: no-repeat;"></div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <h3>Quantum Realm Blog</h3>
+        <p>Wagtail CMS-powered physics blog with community contribution support.</p>
+      </div>
+      <div class="card-image" style="background-image: url('qrb.png');background-size: contain;background-repeat: no-repeat;"></div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <h3>Realtime Chat Application</h3>
+        <p>Secure backend Real time integrated chat interface.</p>
+      </div>
+      <div class="card-image" style="background-image: url('chat.png');background-size: contain;background-repeat: no-repeat;" ></div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <h3>Pythonic Eye(OMR Evaluation Software)</h3>
+        <p>Fast and accurate OMR sheet grading using OpenCV, with a user-friendly Django interface for teachers</p>
+      </div>
+      <div class="card-image" style="background-image: url('omr.png');background-size: contain;background-repeat: no-repeat;" ></div>
+    </div>
+
+
+
+  </div>
+
+  <!-- Certification Section -->
+<div class="certification-section">
+  <h2>🎓 Certifications & 🏆 Achievements</h2>
+  <div class="cert-grid">
+    <div class="cert-card">
+      <h3>JEE Mains 2022-2023</h3>
+      <p>Secured All India Rank <strong>#44284</strong></p>
+      <p>Secured All India Rank <strong>#38342</strong></p>
+    </div>
+    <div class="cert-card">
+      <h3>JEE 2022</h3>
+      <p><strong>98 percentile</strong> in Physics</p>
+    </div>
+    <div class="cert-card">
+      <h3>12th CBSE Board</h3>
+      <p>Scored <strong>93.8%</strong> overall and <strong>95%</strong> in PCM</p>
+    </div>
+    <div class="cert-card">
+      <h3>10th CBSE Board</h3>
+      <p>Scored <strong>92%</strong></p>
+    </div>
+    <div class="cert-card">
+      <h3>Current CGPA</h3>
+      <p><strong>8.11</strong> (NIT Agartala)</p>
+    </div>
+    <div class="cert-card">
+      <h3>QNITA @ IBM</h3>
+      <p>Recognized for excellence in Quantum Computing Hackathon</p>
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+
+<footer id="contact">
+    <h3>Contact Me</h3>
+    <p>Email: <a href="mailto:manavdipu180215@gmail.com">manavdipu180215@gmail.com</a></p>
+    <p>Phone: <a href="tel:+919007320906">+91-9007320906</a></p>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/in/manav-sengupta" target="_blank">LinkedIn</a>
+      <a href="https://github.com/manavsengupta" target="_blank">GitHub</a>
+      <a href="https://wa.me/919007320906" target="_blank">WhatsApp</a>
+    </div>
+    <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">© 2025 Manav Sengupta. All rights reserved.</p>
+  </footer>
+
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Electronics Engineer','Web Developer','Python Developer','Electronics Enthusiast','Quantum Enthusiast'],
+      typeSpeed: 50,
+    });
+
+    const toggle = document.getElementById('modeToggle');
+    const core = document.getElementById('core');
+    const it = document.getElementById('it');
+    const sectionTitle = document.getElementById('section-title');
+
+    toggle.addEventListener('change', () => {
+      core.classList.toggle('hidden');
+      it.classList.toggle('hidden');
+      sectionTitle.textContent = toggle.checked ? 'IT/Software Projects' : 'Core Engineering Projects';
+    });
+  </script>
+</body>
+</html>
